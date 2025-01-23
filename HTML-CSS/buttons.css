@@ -1,0 +1,83 @@
+
+    .subscribe-button {
+        background-color: rgb(200, 0, 0);
+        color:white;
+        border-color:rgb(200, 0, 0);
+        padding-top: 8.5px;
+        padding-bottom: 8.5px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin: 9px;
+        transition: opacity .15s;
+        vertical-align: top;
+        border-width:1.4px;
+        border-style: solid;
+    }
+
+    .subscribe-button:hover {
+        opacity: .8 ;
+    }
+
+    .subscribe-button:active {
+        opacity:.6 ;
+    }
+
+
+    
+
+    .join-button {
+        color:rgb(57, 135, 244);
+        border-color: rgb(57, 135, 244);
+        padding-top: 8.5px;
+        padding-bottom: 8.5px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 3px;
+        border-style: solid;
+        background-color:white ;
+        cursor: pointer;
+        margin: 9px;
+        transition: background-color .20s,
+         color .20s;
+         vertical-align:top;
+         border-width: 1.4px;
+         
+    }
+/* button effects */
+    .join-button:hover {
+        background-color:rgb(57, 135, 244);
+        color: white;
+        
+    }
+
+    .join-button:active {
+        background-color:white ;
+        color:rgb(57, 135, 244) ;
+       
+    }
+
+
+
+/* add button style */
+
+    .heheBoy-button {
+        background-color: rgb(255,163,26);
+        padding-top: 8.5px;
+        padding-bottom: 8.5px;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-weight: bold;
+        margin: 9px;
+        border-style: solid;
+        cursor: pointer;
+        transition: box-shadow .15s;
+        vertical-align:top;
+        border-width: 1.4px;
+    }
+
+    .heheBoy-button:hover {
+        box-shadow: 5px 5px 9px rgba(0,0,0,.15);
+    }
+    
