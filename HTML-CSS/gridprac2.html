@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p {
+        font-family: arial;
+      }
+      .profile {
+        width: 200px;
+      }
+      .profile-picture {
+        width: 200px;
+        height: 200px;
+        object-fit:cover;
+      }
+      .username {
+        font-weight: bold;
+        margin-top: 3;
+        margin-bottom:0;
+      }
+      .mutual-row {
+        display: grid;
+        grid-template-columns: 37px 1fr;
+        align-items: center;
+        margin-top: 3;
+      }
+      .mutual-photo {
+        height:28px;
+        width: 28px;
+        border-radius: 14px;
+        object-fit: cover;
+        vertical-align: middle;
+      }
+      .mutual-friends {
+        font-size:12px;
+        color: rgb(102, 100, 100);
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="profile">
+        <img class="profile-picture" src="images/cat2.jpg">
+        <p class="username">
+          Oliver
+        </p>
+        <div class="mutual-row">
+          <img class="mutual-photo" src="images/cat.jpg">
+          <p class="mutual-friends">
+            2 mutual friends
+          </p>
+          <button>
+            Add friend
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
