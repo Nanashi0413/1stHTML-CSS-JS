@@ -3,15 +3,41 @@
     <head>
         <title></title>
         <style>
+            html, body {
+                height: 100%; 
+                margin: 0; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                font-family: arial;
+            }
+           
+            .profile {
+                border: solid, thin;
+                width: 300px;
+            }
             p {
                 margin-top: 0;
                 margin-bottom:0;
                 font-family: arial;
-                font-size: 14px;
+                font-size: 13.5px;
+            }
+
+            .name {
+                font-weight: bold;
+                margin-bottom: 3px;
+            }
+            
+            .occupation,
+            .status{
+                margin-bottom:3px;
+                color: gray;
             }
 
             .profile-picture {
                 display: inline-block;
+                margin-right: 7px;
+                margin-left: 7px;
             }
 
             .neko {
@@ -32,7 +58,16 @@
             }
             
             .follow-button {
-                color
+                background-color: rgb(17, 132, 226);
+                color: white;
+                border: solid;
+                border-color: rgb(17, 132, 226);
+                border-radius: 3px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                padding-left: 7px;
+                padding-right: 7px;
+                font-weight: bold;
             }
         </style>
     </head>
@@ -43,7 +78,7 @@
             </div>
             <div class="profile-description">
                 <p class="name"> sky</p>
-                <p class="occupaion"> the cat</p>
+                <p class="occupation"> the cat</p>
                 <p class="status"> grumpy</p>
             </div>
             <div class="follow">
