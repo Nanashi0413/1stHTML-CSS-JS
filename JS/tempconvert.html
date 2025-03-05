@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function convertCelsiusToFahrenheit(celsius) {
+        return celsius * 9/5 + 32;
+      }
+      function convertFahrenheitToCelsius(fahrenheit) {
+        return (fahrenheit - 32) * 5/9;
+      }
+      function convertTemp(degrees, unit) {
+        if (unit === 'C') {
+          const result = convertCelsiusToFahrenheit(degrees);
+          return result;
+        } else if (unit === 'F') {
+          const result = convertFahrenheitToCelsius(degrees);
+          return result;
+        } else {
+          return 'Invalid unit';
+        }   
+      }
+      console.log(convertTemp(20, 'C'));
+      console.log(convertTemp(212, 'F'));
+    </script>
+  </body>
+</html>
