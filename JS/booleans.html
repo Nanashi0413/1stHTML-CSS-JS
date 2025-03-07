@@ -18,10 +18,28 @@
       playGame('scissors');
     ">Scissors</button>
 
+    <button onclick="
+      resetScore();
+    ">Reset Score</button>
+
+    <div>
+      <p>Wins: <span id='wins'>0</span></p>
+      <p>Losses: <span id='losses'>0</span></p>
+      <p>Draws: <span id='draws'>0</span></p>
+    </div>
+
     <script>
+      
+      const scoreBoard = {
+        wins: 0,
+        losses: 0,
+        draws: 0
+      }
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
+
         let result = '';
+
         if (playerMove === computerMove) {
           result = 'It\'s a draw!';
         } else if (
@@ -33,7 +51,21 @@
         } else {
           result = 'You lose!';
         }
-        alert(`You chose: ${playerMove}. Computer chose: ${computerMove}. ${result}`);
+
+        if (result === 'You win!') {
+          scoreBoard.wins += 1;
+        } else if (result === 'You lose!') {
+          scoreBoard.losses += 1;
+        } else {
+          scoreBoard.draws += 1;
+        }
+        document.getElementById('wins').innerText = scoreBoard.wins;
+        document.getElementById('losses').innerText = scoreBoard.losses;  
+        document.getElementById('draws').innerText = scoreBoard.draws;
+
+        alert(`You chose: ${playerMove}. Computer chose: ${computerMove}. ${result} 
+        Wins: ${scoreBoard.wins} Losses: ${scoreBoard.losses} Draws: ${scoreBoard.draws}`);
+       
       }
 
       function pickComputerMove() {
@@ -48,7 +80,17 @@
           computerMove = 'scissors';
         }
         return computerMove;
-          }
+       }
+
+       function resetScore() {
+         scoreBoard.wins = 0;
+         scoreBoard.losses = 0;
+         scoreBoard.draws = 0;
+         document.getElementById('wins').innerText = scoreBoard.wins;
+         document.getElementById('losses').innerText = scoreBoard.losses;  
+         document.getElementById('draws').innerText = scoreBoard.draws;
+       }
+     
     </script>
   </body>
 </html>
