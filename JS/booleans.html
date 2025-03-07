@@ -23,18 +23,19 @@
     ">Reset Score</button>
 
     <div>
-      <p>Wins: <span id='wins'>0</span></p>
-      <p>Losses: <span id='losses'>0</span></p>
-      <p>Draws: <span id='draws'>0</span></p>
+      <p>Wins: <span id="wins">0</span></p>
+      <p>Losses: <span id="losses">0</span></p>
+      <p>Draws: <span id="draws">0</span></p>
     </div>
 
     <script>
-      
+
       const scoreBoard = {
         wins: 0,
         losses: 0,
         draws: 0
-      }
+      };
+      
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
 
@@ -59,8 +60,9 @@
         } else {
           scoreBoard.draws += 1;
         }
+
         document.getElementById('wins').innerText = scoreBoard.wins;
-        document.getElementById('losses').innerText = scoreBoard.losses;  
+        document.getElementById('losses').innerText = scoreBoard.losses;
         document.getElementById('draws').innerText = scoreBoard.draws;
 
         alert(`You chose: ${playerMove}. Computer chose: ${computerMove}. ${result} 
@@ -86,11 +88,11 @@
          scoreBoard.wins = 0;
          scoreBoard.losses = 0;
          scoreBoard.draws = 0;
+
          document.getElementById('wins').innerText = scoreBoard.wins;
-         document.getElementById('losses').innerText = scoreBoard.losses;  
+         document.getElementById('losses').innerText = scoreBoard.losses;
          document.getElementById('draws').innerText = scoreBoard.draws;
        }
-     
     </script>
   </body>
 </html>
