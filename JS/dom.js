@@ -10,13 +10,19 @@
 function calculateOrder() {
   const inputElement = document.querySelector('.js-cost-input');
 
-  const cost = parseInt(inputElement.value);
+  let cost = Number(inputElement.value);
 
   if (cost < 40) {
     cost = cost + 10;
-  }
+  } 
 
   document.querySelector('.js-total-cost')
     .innerText = `$${cost}`;
 }
-  
+
+function pressEnterCalculate(event) {
+  if (event.key === 'Enter') {
+    calculateOrder();
+  }
+}
+
