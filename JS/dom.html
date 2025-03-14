@@ -2,12 +2,22 @@
 <html>
   <head>
     <title>DOM</title>
-    <script src="dom.js"></script>
   </head>
   <body>
+
     <p>YouTube Subscribe Button</p>
     <button class="js-subButton" onclick="hitSubscribe()">
       Subscribe
     </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders Under 40$ = +10$ Shipping Fee</p>
+    <p>Orders Over 40$ = Free Shipping</p>
+    <input type="text" class="js-cost-input" placeholder="Cost of Order">
+    <button id="calculateButton" onclick="calculateOrder()">Calculate</button>
+    <p class="js-total-cost"></p>
+    
+    <script src="dom.js"></script>
+
   </body>
 </html>
