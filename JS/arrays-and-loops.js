@@ -8,14 +8,14 @@ function renderTodoList () {
     const todoObj = todoArray[i];
     const {name, dueDate} = todoObj;
     const html = `
-    <p>
-      ${name} ${dueDate}
+      <div class="todo-list">${name}</div>
+      <div class="todo-list">${dueDate}</div>
       <button 
-      onclick="
-        todoArray.splice(${i},1);
-        renderTodoList();
+        class="js-delete-todo"
+        onclick="
+          todoArray.splice(${i},1);
+          renderTodoList();
       ">Delete</button>
-    </p>
     `;
     todoListHTML += html;
   }
