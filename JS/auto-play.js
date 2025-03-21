@@ -20,6 +20,26 @@ function saveScoreBoard() {
   localStorage.setItem('scoreBoard', JSON.stringify(scoreBoard));
 }
 
+isAutoPlaying = false;
+let autoPlayInterval;
+const stopAutoPlayButton = document.querySelector('.auto-play-button');
+function autoPlay() {
+    if (!isAutoPlaying) {
+      autoPlayInterval = setInterval(() =>{
+        const playerMove = pickComputerMove();
+        playGame(playerMove);
+      }, 1000);
+      isAutoPlaying = true;
+      stopAutoPlayButton.innerText = 'Stop Auto Play';
+  } else {
+    clearInterval(autoPlayInterval);
+    isAutoPlaying = false;
+    stopAutoPlayButton.innerText = 'Auto Play';
+  }
+}
+
+
+
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
 
@@ -86,3 +106,4 @@ function resetScore() {
 
 // Load the scoreBoard when the page loads
 window.onload = loadScoreBoard;
+
