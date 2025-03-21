@@ -19,6 +19,7 @@ function renderTodoList () {
     `;
     todoListHTML += html;
   }
+
   document.querySelector('.js-todo-container')
     .innerHTML = todoListHTML;
 }
@@ -29,7 +30,11 @@ function addTodo () {
   const dueDateInputElement = document.querySelector('.js-due-date-input');
   const dueDate = dueDateInputElement.value;
 
-  
+  if (!name || !dueDate) {
+    alert('Please fill in the task name and due date');
+    return
+  }
+
   todoArray.push({
     name,
     dueDate
